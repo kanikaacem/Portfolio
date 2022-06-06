@@ -185,3 +185,24 @@ export const contentPortfolio = [
     img: "/assets/content.png",
   },
 ];
+
+export const DesignationWorkData = [
+  {
+    id: 1,
+    logo: "/assets/mobile.png",
+    title: "Mobile",
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quoadipisci recusandae, accusamus aspernatur molestias veritatisoptio laborum fuga? Minus recusandae quaerat quasi ipsumexpedita cumque magni, accusantium laboriosam assumenda officia.",
+  },
+  {
+    id: 2,
+    logo: "/assets/twitter.png",
+    title: "Twitter",
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quoadipisci recusandae, accusamus aspernatur molestias veritatisoptio laborum fuga? Minus recusandae quaerat quasi ipsumexpedita cumque magni, accusantium laboriosam assumenda officia.",
+  },
+  {
+    id: 3,
+    logo: "/assets/writing.png",
+    title: "Writing",
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quoadipisci recusandae, accusamus aspernatur molestias veritatisoptio laborum fuga? Minus recusandae quaerat quasi ipsumexpedita cumque magni, accusantium laboriosam assumenda officia.",
+  },
+];

@@ -1,35 +1,46 @@
+import { DesignationWorkData } from "./data";
+import { useState } from "react";
 function Designation() {
+  const [currentSlide, SetCurrentSlide] = useState(0);
   return (
     <div className="DesignationContainer" id="DesignationContainer">
       <div className="arrows">
-        <img className="LeftArrow" src="/assets/arrow.png" alt="" />
-      </div>
-
-      <div className="DesignationWorks">
-        <div className="DesignationLeft">
-          <img className="DesignationImage" src="/assets/mobile.png" alt="" />
-          <h1 className="Title">Title</h1>
-          <span className="DesignationContent">
-            {" "}
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
-            officiis suscipit harum? Nobis saepe blanditiis officia nihil
-            deleniti iste quae in? Officiis nisi mollitia accusamus vel
-            doloremque fugiat aut libero?
-          </span>
-          <br></br>
-          <br></br>
-          <span className="DesignationLink">Projects</span>
+        <div className="RightArrow">
+          <img className="RightArrowImage" src="/assets/arrow.png" alt=""></img>
         </div>
-        <div className="DesignationRight">
-          <div className="DesignationRightImage">
-            <img className="Imge" src="/assets/web.png" alt="" />
+        <div
+          className="LeftArrow"
+          onClick={() => SetCurrentSlide(currentSlide + 1)}
+        >
+          <img className="LeftArrowImage" src="/assets/arrow.png" alt=""></img>
+        </div>
+      </div>
+      {DesignationWorkData.map((data) => {
+        return (
+          <div
+            className="slider"
+            id={data.id}
+            style={{
+              left: (data.id - 1) * 100 + "%",
+              transform: `translateX(-${currentSlide * 100}vw)`,
+            }}
+          >
+            <div className="container">
+              <div className="item">
+                <div className="left">
+                  <img src={data.logo} className="DesignationImage" alt="" />
+                  <h1 className="DesignationTitle">{data.title}</h1>
+                  <p className="DesignationParagraph">{data.desc}</p>
+                  <p className="DesignationLink">Projects</p>
+                </div>
+                <div className="right">
+                  <img src="/assets/web.png" alt="" className="RightImage" />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div className="arrows">
-        <img className="RightArrow" src="/assets/arrow.png" alt="" />
-      </div>
+        );
+      })}
     </div>
   );
 }
