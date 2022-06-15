@@ -13,7 +13,12 @@ function App() {
       <Topbar MenuOpen={MenuOpen} SetMenuOpen={SetMenuOpen}></Topbar>
       <Menu MenuOpen={MenuOpen} SetMenuOpen={SetMenuOpen}></Menu>
       <div className="Sections">
+        <Intro></Intro>
+        <Portfolio></Portfolio>
+
         <Designation></Designation>
+        <Testimonial></Testimonial>
+        <Contact></Contact>
       </div>
     </div>
   );

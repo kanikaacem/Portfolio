@@ -5,12 +5,23 @@ function Designation() {
   return (
     <div className="DesignationContainer" id="DesignationContainer">
       <div className="arrows">
-        <div className="RightArrow">
+        <div
+          className="RightArrow"
+          onClick={() =>
+            currentSlide === 0
+              ? SetCurrentSlide(0)
+              : SetCurrentSlide(currentSlide - 1)
+          }
+        >
           <img className="RightArrowImage" src="/assets/arrow.png" alt=""></img>
         </div>
         <div
           className="LeftArrow"
-          onClick={() => SetCurrentSlide(currentSlide + 1)}
+          onClick={() =>
+            currentSlide === DesignationWorkData.length - 1
+              ? SetCurrentSlide(0)
+              : SetCurrentSlide(currentSlide + 1)
+          }
         >
           <img className="LeftArrowImage" src="/assets/arrow.png" alt=""></img>
         </div>

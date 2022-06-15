@@ -46,6 +46,10 @@ $topbarcolor:#ffffff;
                         margin-right:10px;
                         cursor:pointer;
                     }
+                
+                    @media screen and (max-width:725px){
+                        display:none;
+                    }
                 }
 
             }
@@ -108,16 +112,136 @@ $topbarcolor:#ffffff;
             width:100%;
             height: calc(100vh - 70px);
             scroll-snap-align: start;
+            @media screen and (max-width:1200px){
+                height: unset;
+            }
 
         }
+        
         .ContactContainer{
-            background-color: rosybrown;
+           .ContactUsWrapper{
+            display: flex;
+            flex-direction: row;
+
+            @media  screen and (max-width:980px) {
+                flex-direction: column;
+            }
+           }
+           .left{
+            flex:1;
+            img{
+                object-fit: cover;
+                width:100%;
+            }
+           }
+           .right{
+            flex:1;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            .ContactUsForm{
+                height:300px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+
+                input{
+                    width:300px;
+                    text-align:center;
+                    padding:10px;
+                }
+                .Message{
+                    height: 100px;
+                }
+                .SubmitButton{
+                    color: white;
+                    background: #292929;
+                    border: none;
+                    padding: 10px 40px;
+                    border-radius: 10px;
+                    cursor:pointer;
+                }
+            }
+           }
         }
         
        
        
         .TestimonialContainer{
-            background-color: beige;
+            .TestimonialHeading{
+                text-align: center;
+                font-size:50px;
+                padding:50px 0;
+            }
+            .Container{
+                padding:30px;
+                display: flex;
+                gap:5%;
+                align-items: center;
+                justify-content: center;
+
+                @media screen and (max-width:768px) {
+                    flex-direction: column;
+                }
+                .TestimonialItem{
+                    width: 350px;
+                    border: 1 solid black;
+                    box-shadow: 1px 0px 5px 4px rgba(219,215,215,0.75);
+                    -moz-box-shadow: 1px 0px 5px 4px rgba(112,89,89,0.75);
+                    padding: 20px;
+                    cursor:pointer;
+                    transition:1s all ease;
+                    @media screen and (max-width:768px) {
+                        margin-bottom: 20px;
+                    }
+                    &.Featured{
+                        width:400px;
+                        height:250px;
+                    }
+
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+
+                    .Top{
+                        display:flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin:10px 0;
+                        .rightArrow{
+                            width:20px;
+                        }
+                        .Person{
+                            width:80px;
+                            height: 80px;
+                            object-fit: cover;
+                            margin:0 10px;
+                            border-radius:50%;
+                        }
+                        .Youtube{
+                            width:20px;
+                        }
+                    }
+
+                    .Center{
+                        padding: 10px;
+                        text-align: justify;
+                    }
+
+                    .bottom{
+                        padding: 10px;
+                        text-align: center;
+
+                        .PersonDesignation{
+                            color:#8a8a8a;
+                        }
+                    }
+
+                }
+            }
         }
 
         .DesignationContainer{
@@ -125,7 +249,7 @@ $topbarcolor:#ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            
+            position: relative;
             .arrows{
                 cursor: pointer;
                 z-index: 3;
@@ -156,6 +280,7 @@ $topbarcolor:#ffffff;
                 width:100%;
                 position:absolute;
                 left:0px;
+                transition:.5s all ease;
             }
             .container{
                 width:50%;
@@ -165,6 +290,10 @@ $topbarcolor:#ffffff;
                 height:inherit;
                 .item{
                     display:flex;
+                    
+                    @media screen  and (max-width:980px){
+                        flex-direction: column;
+                    }
 
                     .left{
                         padding:20px;
@@ -176,6 +305,15 @@ $topbarcolor:#ffffff;
                         }
                         .DesignationTitle{
                             margin:10px 0;
+
+                            @media screen and (max-width:980px){
+                                font-size:14px;
+                            }
+                        }
+                        .DesignationParagraph{
+                            @media screen and (max-width:980px){
+                                font-size: 12px;
+                            }
                         }
                         .DesignationLink{
                             margin:10px 0;
@@ -187,10 +325,24 @@ $topbarcolor:#ffffff;
 
                         .RightImage{
                             width:95%;
+
+                            @media screen and (max-width:980px){
+                                width:50%;
+                            }
                         }
                     }
                 }
             }
+
+            @media  screen and (max-width:1200px) {
+                height:600px;
+            }
+
+           
+        }
+
+        @media screen  and (max-width:725px){
+            overflow-x: hidden;
         }
 
     }
@@ -290,6 +442,13 @@ $topbarcolor:#ffffff;
                 margin-left:20%;
                 animation: arrowBlink 2s infinite;
 
+                @media screen and (max-width:980px) {
+                    position: relative;
+                    margin-top: 50px;
+                    margin-left: 45%;
+                    
+                }
+
                 @keyframes arrowBlink {
                     100%{
                         opacity: 0;
@@ -298,7 +457,12 @@ $topbarcolor:#ffffff;
                 }
                }
             }
+            @media screen  and (max-width:980px){
+                flex-direction: column;
+            }
         }
+        
+        
     }
 
     .PortfolioContainer{
@@ -321,6 +485,11 @@ $topbarcolor:#ffffff;
             gap: 100px;
             cursor: pointer;
 
+            @media screen  and (max-width:725px){
+                gap:0px;
+                padding-left:0px;
+            }
+
             .PortfolioMenuItem{
                 list-style: none;
                 color: $textcolor;
@@ -340,6 +509,8 @@ $topbarcolor:#ffffff;
             gap: 20px;
             width:80%;
             margin:20px auto;
+            text-align: center;
+            justify-content: center;
 
             .DivItem{
                 position: relative;

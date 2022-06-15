@@ -206,3 +206,36 @@ export const DesignationWorkData = [
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quoadipisci recusandae, accusamus aspernatur molestias veritatisoptio laborum fuga? Minus recusandae quaerat quasi ipsumexpedita cumque magni, accusantium laboriosam assumenda officia.",
   },
 ];
+
+export const TestimonialData = [
+  {
+    id: 1,
+    logo: "/assets/youtube.png",
+    personImage: "/assets/user.png",
+    arrow: "/assets/right-arrow.png",
+    data: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatem modi dolorem deleniti magni est ad illum.",
+    userName: "Person name1",
+    designation: "Designation 1",
+    featured: false,
+  },
+  {
+    id: 2,
+    logo: "/assets/youtube.png",
+    personImage: "/assets/user.png",
+    arrow: "/assets/right-arrow.png",
+    data: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatem modi dolorem deleniti magni est ad illum.",
+    userName: "Person name2",
+    designation: "Designation 2",
+    featured: true,
+  },
+  {
+    id: 3,
+    logo: "/assets/youtube.png",
+    personImage: "/assets/user.png",
+    arrow: "/assets/right-arrow.png",
+    data: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatem modi dolorem deleniti magni est ad illum.",
+    userName: "Person name3",
+    designation: "Designation 3",
+    featured: false,
+  },
+];
